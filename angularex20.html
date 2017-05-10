@@ -1,0 +1,21 @@
+<html ng-app="countryApp">
+<head>
+	 <meta charset="utf-8">
+    <title>Angular.js Example</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+    <script>
+    	var countryApp
+    </script>
+</head>
+<body ng-controller="CountryCtrl">
+<!--easy querying i could use this in the keyboard app-->
+	Search:<input ng-model="query" type="text"/>
+	<table>
+		<tr ng-repeat="country in countries">
+			<td>{{country.name}}</td>
+			<td>{{country.population}}</td>
+			<td><img src="{{country.flagURL}}" width="100"></td>
+		</tr>
+	</table>
+</body>
+</html>
