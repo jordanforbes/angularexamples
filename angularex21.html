@@ -7,7 +7,7 @@
     	var countryApp = angular.module('countryApp',[]);
     	countryApp.controller('CountryCtrl',
     		function($scope,$http){
-    			$http.get('newcountries.json').success(function(data){
+    			$http.get('countrycapital.json').success(function(data){
     				$scope.countries = data;
     			})
     		})
@@ -21,9 +21,10 @@
 			<th>Flag</th>
 		</tr>
 		<tr ng-repeat="country in countries">
-		<td>{{country.name}}</td>
-		<td>{{country.population}}</td>
-		<td><img ng-src="{{country.flagURL}}" width= "100"></td>
+			<td>{{country.name}}</td>
+			<td>{{country.population}}</td>
+			<td><img ng-src="{{country.flagURL}}" width= "100"></td>
+			<td>{{country.capital}}</td>
 		</tr>
 	</table>
 </body>
